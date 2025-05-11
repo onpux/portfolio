@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Portafolio personal de Your Name, desarrollador web especializado en Python, React y análisis de datos.">
+  <meta name="keywords" content="portafolio, desarrollador web, Python, React, análisis de datos">
+  <meta name="author" content="Your Name">
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+  <title>Mi Portafolio</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+  <!-- Header -->
+  <header>
+    <h1>Bienvenido a mi Portafolio</h1>
+    <p>Desarrollador web | React | Python | Análisis de Datos</p>
+  </header>
+
+  <!-- Proyectos -->
+  <section id="projects">
+    <h2>Proyectos</h2>
+    <div class="project">
+      <h3>Proyecto 1</h3>
+      <p>Descripción del proyecto 1...</p>
+    </div>
+    <div class="project">
+      <h3>Proyecto 2</h3>
+      <p>Descripción del proyecto 2...</p>
+    </div>
+    <!-- Agrega más proyectos aquí -->
+  </section>
+
+  <!-- Formulario de contacto -->
+  <section id="contact">
+    <h2>Contact</h2>
+    <form action="https://formspree.io/f/yourformid" method="POST">
+      <label for="name">Name:</label>
+      <input type="text" id="name" name="name" required>
+      
+      <label for="email">Email:</label>
+      <input type="email" id="email" name="email" required>
+      
+      <label for="message">Message:</label>
+      <textarea id="message" name="message" rows="5" required></textarea>
+      
+      <button type="submit">Send</button>
+    </form>
+  </section>
+
+  <!-- Botón "Volver arriba" -->
+  <button id="backToTop" onclick="scrollToTop()" aria-label="Volver al inicio">↑</button>
+
+  <script>
+    function scrollToTop() {
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    }
+
+    window.addEventListener('scroll', () => {
+      const button = document.getElementById('backToTop');
+      if (window.scrollY > 200) {
+        button.style.display = 'block';
+      } else {
+        button.style.display = 'none';
+      }
+    });
+  </script>
+
+</body>
+</html>
