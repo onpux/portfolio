@@ -1,55 +1,116 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Portafolio personal de Your Name, desarrollador web especializado en Python, React y análisis de datos.">
-  <meta name="keywords" content="portafolio, desarrollador web, Python, React, análisis de datos">
-  <meta name="author" content="Your Name">
-  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Portafolio personal de desarrollador web especializado en Python, React y análisis de datos." />
+  <meta name="keywords" content="portafolio, desarrollador web, Python, React, análisis de datos" />
+  <meta name="author" content="Tu Nombre" />
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet" />
   <title>Mi Portafolio</title>
-  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
 
   <!-- Header -->
   <header>
     <h1>Bienvenido a mi Portafolio</h1>
-    <p>Desarrollador web | React | Python | Análisis de Datos</p>
+    <p>Desarrollador Web | Python | React | Análisis de Datos</p>
   </header>
+
+  <!-- Sobre mí -->
+  <section id="about">
+    <h2>Sobre mí</h2>
+    <p>
+      Soy un desarrollador autodidacta con formación técnica en programación web, análisis de datos y machine learning. He completado certificaciones intensivas en FreeCodeCamp que me han permitido dominar herramientas como JavaScript, Python, React, D3.js y bibliotecas científicas como Pandas y Scikit-learn. Actualmente estoy construyendo proyectos prácticos para mostrar mis capacidades y ofrecer soluciones profesionales a través del desarrollo web y el análisis computacional.
+    </p>
+  </section>
+
+  <!-- Certificaciones -->
+  <section id="certifications">
+    <h2>Certificaciones</h2>
+
+    <div class="certificate">
+      <h3>Responsive Web Design</h3>
+      <p>Diseño de sitios web responsivos con HTML, CSS, Flexbox y Grid. Principios de accesibilidad y adaptabilidad.</p>
+      <a href="https://www.freecodecamp.org/certification/onpux/responsive-web-design" target="_blank">Ver certificado</a>
+    </div>
+
+    <div class="certificate">
+      <h3>JavaScript Algorithms and Data Structures</h3>
+      <p>Desarrollo de algoritmos y estructuras de datos con JavaScript moderno (ES6). Resolución de problemas computacionales.</p>
+      <a href="https://www.freecodecamp.org/certification/onpux/javascript-algorithms-and-data-structures-v8" target="_blank">Ver certificado</a>
+    </div>
+
+    <div class="certificate">
+      <h3>Front End Development Libraries</h3>
+      <p>Uso de React, Redux, Bootstrap, jQuery y Sass para construir interfaces interactivas y mantenibles.</p>
+      <a href="https://www.freecodecamp.org/certification/onpux/front-end-development-libraries" target="_blank">Ver certificado</a>
+    </div>
+
+    <div class="certificate">
+      <h3>Data Visualization</h3>
+      <p>Visualización de datos con D3.js. Desarrollo de gráficos interactivos (barras, líneas, dispersión, mapas de calor).</p>
+      <a href="https://www.freecodecamp.org/certification/onpux/data-visualization" target="_blank">Ver certificado</a>
+    </div>
+
+    <div class="certificate">
+      <h3>Scientific Computing with Python</h3>
+      <p>Fundamentos de programación con Python. Automatización de procesos y uso de estructuras básicas.</p>
+      <a href="https://www.freecodecamp.org/certification/onpux/scientific-computing-with-python-v7" target="_blank">Ver certificado</a>
+    </div>
+
+    <div class="certificate">
+      <h3>Data Analysis with Python</h3>
+      <p>Análisis de datos con Pandas, NumPy, Matplotlib y Seaborn. Limpieza, manipulación y visualización de datos.</p>
+      <a href="https://www.freecodecamp.org/certification/onpux/data-analysis-with-python-v7" target="_blank">Ver certificado</a>
+    </div>
+
+    <div class="certificate">
+      <h3>Machine Learning with Python</h3>
+      <p>Creación de modelos predictivos usando Scikit-learn. Regresión, clasificación y agrupamiento (K-means, árboles de decisión).</p>
+      <a href="https://www.freecodecamp.org/certification/onpux/machine-learning-with-python-v7" target="_blank">Ver certificado</a>
+    </div>
+
+    <div class="certificate">
+      <h3>College Algebra with Python</h3>
+      <p>Resolución de problemas algebraicos con programación. Aplicación de funciones matemáticas y álgebra lineal.</p>
+      <a href="https://www.freecodecamp.org/certification/onpux/college-algebra-with-python-v8" target="_blank">Ver certificado</a>
+    </div>
+
+  </section>
 
   <!-- Proyectos -->
   <section id="projects">
     <h2>Proyectos</h2>
     <div class="project">
       <h3>Proyecto 1</h3>
-      <p>Descripción del proyecto 1...</p>
+      <p>Este será tu primer proyecto visible. Puedes empezar con una página web simple, un reloj en JS, una app de clima, o una visualización con D3.js.</p>
     </div>
     <div class="project">
       <h3>Proyecto 2</h3>
-      <p>Descripción del proyecto 2...</p>
+      <p>A medida que avances, aquí irás incluyendo tus aplicaciones, herramientas o experimentos públicos.</p>
     </div>
-    <!-- Agrega más proyectos aquí -->
   </section>
 
-  <!-- Formulario de contacto -->
+  <!-- Contacto -->
   <section id="contact">
-    <h2>Contact</h2>
+    <h2>Contacto</h2>
     <form action="https://formspree.io/f/yourformid" method="POST">
-      <label for="name">Name:</label>
-      <input type="text" id="name" name="name" required>
+      <label for="name">Nombre:</label>
+      <input type="text" id="name" name="name" required />
       
-      <label for="email">Email:</label>
-      <input type="email" id="email" name="email" required>
+      <label for="email">Correo electrónico:</label>
+      <input type="email" id="email" name="email" required />
       
-      <label for="message">Message:</label>
+      <label for="message">Mensaje:</label>
       <textarea id="message" name="message" rows="5" required></textarea>
       
-      <button type="submit">Send</button>
+      <button type="submit">Enviar</button>
     </form>
   </section>
 
-  <!-- Botón "Volver arriba" -->
+  <!-- Botón volver arriba -->
   <button id="backToTop" onclick="scrollToTop()" aria-label="Volver al inicio">↑</button>
 
   <script>
@@ -59,11 +120,7 @@
 
     window.addEventListener('scroll', () => {
       const button = document.getElementById('backToTop');
-      if (window.scrollY > 200) {
-        button.style.display = 'block';
-      } else {
-        button.style.display = 'none';
-      }
+      button.style.display = window.scrollY > 200 ? 'block' : 'none';
     });
   </script>
 
