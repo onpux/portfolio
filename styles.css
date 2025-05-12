@@ -126,3 +126,38 @@ form button:hover {
   background: #444;
   transform: scale(1.1);
 }
+
+#about {
+  padding: 40px 20px;
+  background-color: #ffffff;
+  line-height: 1.6;
+}
+
+.about-section {
+  margin-bottom: 30px;
+}
+
+.about-section h3 {
+  color: #333;
+  margin-bottom: 10px;
+  font-size: 1.4rem;
+}
+
+.about-section ul {
+  padding-left: 20px;
+  list-style: disc;
+}
+
+.contact-info li {
+  margin-bottom: 10px;
+}
+
+.contact-info a {
+  color: #0077cc;
+  text-decoration: none;
+}
+
+.contact-info a:hover {
+  text-decoration: underline;
+}
+
