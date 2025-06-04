@@ -1,164 +1,248 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="description" content="Personal portfolio of a web developer specialized in Python, React, and data analysis." />
-  <meta name="keywords" content="portfolio, web developer, Python, React, data analysis" />
-  <meta name="author" content="Your Name" />
-  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet" />
-  <title>My Portfolio</title>
-  <link rel="stylesheet" href="styles.css" />
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /* Estilos generales */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            scroll-behavior: smooth;
+        }
+        h1 {
+            font-size: 2.5rem;
+            margin: 0;
+            padding: 1rem 0;
+            text-align: center;
+        }
+        /* Secciones */
+        .about-section, .certificate, .project {
+            opacity: 0;
+            transform: translateY(20px);
+            transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+        }
+        .active-reveal {
+            opacity: 1;
+            transform: translateY(0);
+        }
+        /* Botón volver arriba */
+        #backToTop {
+            position: fixed;
+            bottom: 2rem;
+            right: 2rem;
+            display: none;
+            background-color: #6a5acd;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            padding: 0.5rem 1rem;
+            cursor: pointer;
+            font-size: 1rem;
+        }
+        #backToTop:hover {
+            background-color: #483d8b;
+        }
+        /* Efecto de letras animadas en el header */
+        header h1 span {
+            display: inline-block;
+            transition: transform 0.3s, color 0.3s;
+            cursor: pointer;
+        }
+        header h1 span:hover {
+            transform: scale(1.3) rotate(-8deg);
+            color: #fbc2eb;
+        }
+    </style>
 </head>
 <body>
 
-  <!-- Header -->
-  <header>
-    <h1>Welcome to My Portfolio</h1>
-    <p>Web Developer | Python | React | Data Analysis</p>
-  </header>
+<header>
+    <h1>Bienvenido a Mi Portafolio</h1>
+</header>
 
-<!-- About Me -->
-<section id="about">
-  <h2>About Me</h2>
+<main>
+    <section class="about-section">
+        <h2>Sobre Mí</h2>
+        <p>Descripción sobre mí.</p>
+    </section>
 
-  <div class="about-section">
-    <h3>👨‍💻 Who I Am</h3>
-    <p>
-      I'm <strong>Jesus Antonio Marulanda Mariño</strong>, a self-taught front-end developer based in Colombia. My journey into programming started with a deep curiosity for how the web works and a passion for building clean, functional interfaces.
-    </p>
-  </div>
+    <section class="certificate">
+        <h2>Certificados</h2>
+        <p>Mis certificados.</p>
+    </section>
 
-  <div class="about-section">
-    <h3>🎓 Skills & Certifications</h3>
-    <p>
-      I hold multiple certifications from FreeCodeCamp in:
-      <ul>
-        <li>Responsive Web Design</li>
-        <li>JavaScript Algorithms and Data Structures</li>
-        <li>Front-End Development Libraries (React, Bootstrap, jQuery)</li>
-        <li>Data Visualization with D3.js</li>
-        <li>Scientific and Data Analysis with Python</li>
-        <li>Machine Learning with Python</li>
-      </ul>
-      I enjoy building projects that reflect constant learning and a commitment to writing clean, reusable code.
-    </p>
-  </div>
+    <section class="project">
+        <h2>Proyectos</h2>
+        <p>Mis proyectos.</p>
+    </section>
+</main>
 
-  <div class="about-section">
-    <h3>🌍 What I'm Looking For</h3>
-    <p>
-      I’m actively seeking remote or freelance front-end development opportunities. I’m especially interested in simple websites, interactive dashboards, and data-driven visual interfaces.
-    </p>
-  </div>
+<button id="backToTop">Volver Arriba</button>
 
-  <div class="about-section">
-    <h3>📬 Contact Me</h3>
-    <ul class="contact-info">
-      <li>📧 Email: <a href="mailto:onputrevor1@gmail.com">onputrevor1@gmail.com</a></li>
-      <li>📱 WhatsApp: <a href="https://wa.me/573204325745" target="_blank">+57 3204325745</a></li>
-      <li>📄 <a href="https://docs.google.com/document/d/1k7dpEhKTljHOZIuPq3b_zqWL_hQF2lhpY-Y9CdcFgcQ/edit?usp=sharing" target="_blank">My Resume (Google Docs)</a></li>
-    </ul>
-  </div>
-</section>
+<script>
+    // Efecto de aparición animada para secciones al hacer scroll
+    function revealOnScroll() {
+      const reveals = document.querySelectorAll('.about-section, .certificate, .project');
+      let delay = 0;
+      for (const el of reveals) {
+        const windowHeight = window.innerHeight;
+        const elementTop = el.getBoundingClientRect().top;
+        const elementVisible = 80;
+        if (elementTop < windowHeight - elementVisible) {
+          el.classList.add('active-reveal');
+          el.style.transitionDelay = delay + 'ms';
+          delay += 120;
+        } else {
+          el.classList.remove('active-reveal');
+          el.style.transitionDelay = '0ms';
+        }
+      }
+    }
+    window.addEventListener('scroll', revealOnScroll);
+    window.addEventListener('DOMContentLoaded', revealOnScroll);
 
-  <!-- Certifications -->
-  <section id="certifications">
-    <h2>Certifications</h2>
+    // Efecto de letras animadas en el header
+    document.addEventListener('DOMContentLoaded', () => {
+      const h1 = document.querySelector('header h1');
+      if (h1) {
+        const text = h1.textContent;
+        h1.innerHTML = '';
+        for (let i = 0; i < text.length; i++) {
+          const span = document.createElement('span');
+          span.textContent = text[i];
+          span.style.display = 'inline-block';
+          span.style.transition = 'transform 0.3s, color 0.3s, text-shadow 0.3s';
+          span.style.cursor = 'pointer';
+          span.addEventListener('mouseover', () => {
+            span.style.transform = 'scale(1.3) rotate(-8deg)';
+            span.style.color = '#fbc2eb';
+            span.style.textShadow = '0 0 16px #a18cd1, 0 0 8px #fff';
+          });
+          span.addEventListener('mouseout', () => {
+            span.style.transform = 'scale(1)';
+            span.style.color = '';
+            span.style.textShadow = '';
+          });
+          h1.appendChild(span);
+        }
+      }
+    });
 
-    <div class="certificate">
-      <h3>Responsive Web Design</h3>
-      <p>Created responsive websites using HTML, CSS, Flexbox, and Grid. Applied accessibility and mobile-first design principles.</p>
-      <a href="https://www.freecodecamp.org/certification/onpux/responsive-web-design" target="_blank">View certificate</a>
-    </div>
+    // Efecto de máquina de escribir en el subtítulo del header
+    document.addEventListener('DOMContentLoaded', () => {
+      const subtitle = document.createElement('p');
+      subtitle.id = 'typewriter';
+      subtitle.style.fontSize = '1.2rem';
+      subtitle.style.marginTop = '10px';
+      subtitle.style.color = '#a18cd1';
+      const text = 'Web Developer | Python | React | Data Analysis';
+      document.querySelector('header').appendChild(subtitle);
+      let i = 0;
+      function type() {
+        if (i <= text.length) {
+          subtitle.textContent = text.slice(0, i);
+          i++;
+          setTimeout(type, 60);
+        }
+      }
+      type();
+    });
 
-    <div class="certificate">
-      <h3>JavaScript Algorithms and Data Structures</h3>
-      <p>Developed algorithms and data structures using modern JavaScript (ES6). Focused on solving real-world computational problems.</p>
-      <a href="https://www.freecodecamp.org/certification/onpux/javascript-algorithms-and-data-structures-v8" target="_blank">View certificate</a>
-    </div>
+    // Efecto de resplandor en links de certificados
+    document.addEventListener('DOMContentLoaded', () => {
+      const certLinks = document.querySelectorAll('.certificate a');
+      certLinks.forEach(link => {
+        link.addEventListener('mouseover', () => {
+          link.style.boxShadow = '0 0 16px 4px #a18cd1, 0 0 8px #fbc2eb';
+          link.style.background = 'linear-gradient(90deg, #a18cd1 0%, #fbc2eb 100%)';
+          link.style.color = '#fff';
+        });
+        link.addEventListener('mouseout', () => {
+          link.style.boxShadow = '';
+          link.style.background = '';
+          link.style.color = '';
+        });
+      });
+    });
 
-    <div class="certificate">
-      <h3>Front End Development Libraries</h3>
-      <p>Built interactive and maintainable interfaces using React, Redux, Bootstrap, jQuery, and Sass.</p>
-      <a href="https://www.freecodecamp.org/certification/onpux/front-end-development-libraries" target="_blank">View certificate</a>
-    </div>
+    // Animación de conteo para proyectos/certificados (si hay números)
+    document.addEventListener('DOMContentLoaded', () => {
+      const counters = document.querySelectorAll('.counter');
+      counters.forEach(counter => {
+        let start = 0;
+        const end = parseInt(counter.textContent);
+        function update() {
+          if (start < end) {
+            start += Math.ceil((end - start) / 10);
+            counter.textContent = start;
+            setTimeout(update, 40);
+          } else {
+            counter.textContent = end;
+          }
+        }
+        update();
+      });
+    });
 
-    <div class="certificate">
-      <h3>Data Visualization</h3>
-      <p>Designed interactive data visualizations with D3.js. Developed bar charts, line graphs, scatter plots, and heat maps.</p>
-      <a href="https://www.freecodecamp.org/certification/onpux/data-visualization" target="_blank">View certificate</a>
-    </div>
+    // Fondo animado de burbujas moradas
+    document.addEventListener('DOMContentLoaded', () => {
+      const canvas = document.createElement('canvas');
+      canvas.style.position = 'fixed';
+      canvas.style.top = '0';
+      canvas.style.left = '0';
+      canvas.style.width = '100vw';
+      canvas.style.height = '100vh';
+      canvas.style.zIndex = '-1';
+      canvas.style.pointerEvents = 'none';
+      document.body.appendChild(canvas);
+      const ctx = canvas.getContext('2d');
+      let W, H;
+      function resize() {
+        W = window.innerWidth;
+        H = window.innerHeight;
+        canvas.width = W;
+        canvas.height = H;
+      }
+      window.addEventListener('resize', resize);
+      resize();
+      // Burbujas
+      const bubbles = Array.from({length: 18}, () => ({
+        x: Math.random() * W,
+        y: Math.random() * H,
+        r: 18 + Math.random() * 22,
+        d: 0.5 + Math.random() * 1.2,
+        alpha: 0.12 + Math.random() * 0.18
+      }));
+      function animate() {
+        ctx.clearRect(0, 0, W, H);
+        for (const b of bubbles) {
+          ctx.beginPath();
+          ctx.arc(b.x, b.y, b.r, 0, 2 * Math.PI);
+          ctx.fillStyle = `rgba(161,140,209,${b.alpha})`;
+          ctx.fill();
+          b.y -= b.d;
+          if (b.y + b.r < 0) {
+            b.x = Math.random() * W;
+            b.y = H + b.r;
+          }
+        }
+        requestAnimationFrame(animate);
+      }
+      animate();
+    });
 
-    <div class="certificate">
-      <h3>Scientific Computing with Python</h3>
-      <p>Learned Python programming fundamentals. Built automation scripts and handled core data structures effectively.</p>
-      <a href="https://www.freecodecamp.org/certification/onpux/scientific-computing-with-python-v7" target="_blank">View certificate</a>
-    </div>
-
-    <div class="certificate">
-      <h3>Data Analysis with Python</h3>
-      <p>Performed data manipulation and analysis using Pandas, NumPy, Matplotlib, and Seaborn. Focused on cleaning, transforming, and visualizing data sets.</p>
-      <a href="https://www.freecodecamp.org/certification/onpux/data-analysis-with-python-v7" target="_blank">View certificate</a>
-    </div>
-
-    <div class="certificate">
-      <h3>Machine Learning with Python</h3>
-      <p>Built predictive models using Scikit-learn. Applied regression, classification, and clustering algorithms (K-Means, Decision Trees, etc.).</p>
-      <a href="https://www.freecodecamp.org/certification/onpux/machine-learning-with-python-v7" target="_blank">View certificate</a>
-    </div>
-
-    <div class="certificate">
-      <h3>College Algebra with Python</h3>
-      <p>Solved algebraic problems through Python programming. Applied mathematical functions and linear algebra concepts.</p>
-      <a href="https://www.freecodecamp.org/certification/onpux/college-algebra-with-python-v8" target="_blank">View certificate</a>
-    </div>
-
-  </section>
-
-  <!-- Projects -->
-  <section id="projects">
-    <h2>Projects</h2>
-    <div class="project">
-      <h3>Project 1</h3>
-      <p>This will be your first featured project. You can start with a simple website, a JavaScript clock, a weather app, or a data visualization with D3.js.</p>
-    </div>
-    <div class="project">
-      <h3>Project 2</h3>
-      <p>As you progress, you will continue adding your public apps, tools, or data experiments here.</p>
-    </div>
-  </section>
-
-  <!-- Contact -->
-  <section id="contact">
-    <h2>Contact</h2>
-    <form action="https://formspree.io/f/yourformid" method="POST">
-      <label for="name">Name:</label>
-      <input type="text" id="name" name="name" required />
-      
-      <label for="email">Email:</label>
-      <input type="email" id="email" name="email" required />
-      
-      <label for="message">Message:</label>
-      <textarea id="message" name="message" rows="5" required></textarea>
-      
-      <button type="submit">Send</button>
-    </form>
-  </section>
-
-  <!-- Back to top button -->
-  <button id="backToTop" onclick="scrollToTop()" aria-label="Back to top">↑</button>
-
-  <script>
+    // Botón volver arriba
     function scrollToTop() {
       window.scrollTo({ top: 0, behavior: 'smooth' });
     }
-
+    window.scrollToTop = scrollToTop;
     window.addEventListener('scroll', () => {
       const button = document.getElementById('backToTop');
       button.style.display = window.scrollY > 200 ? 'block' : 'none';
     });
   </script>
-
 </body>
 </html>
