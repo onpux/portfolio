@@ -1,248 +1,132 @@
 <!DOCTYPE html>
-<html lang="es">
+<html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <style>
-        /* Estilos generales */
-        body {
-            font-family: Arial, sans-serif;
-            margin: 0;
-            padding: 0;
-            scroll-behavior: smooth;
-        }
-        h1 {
-            font-size: 2.5rem;
-            margin: 0;
-            padding: 1rem 0;
-            text-align: center;
-        }
-        /* Secciones */
-        .about-section, .certificate, .project {
-            opacity: 0;
-            transform: translateY(20px);
-            transition: opacity 0.6s ease-out, transform 0.6s ease-out;
-        }
-        .active-reveal {
-            opacity: 1;
-            transform: translateY(0);
-        }
-        /* Botón volver arriba */
-        #backToTop {
-            position: fixed;
-            bottom: 2rem;
-            right: 2rem;
-            display: none;
-            background-color: #6a5acd;
-            color: white;
-            border: none;
-            border-radius: 5px;
-            padding: 0.5rem 1rem;
-            cursor: pointer;
-            font-size: 1rem;
-        }
-        #backToTop:hover {
-            background-color: #483d8b;
-        }
-        /* Efecto de letras animadas en el header */
-        header h1 span {
-            display: inline-block;
-            transition: transform 0.3s, color 0.3s;
-            cursor: pointer;
-        }
-        header h1 span:hover {
-            transform: scale(1.3) rotate(-8deg);
-            color: #fbc2eb;
-        }
-    </style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Professional Web Designer Curriculum</title>
+  <link rel="stylesheet" href="designer_cv.css">
 </head>
 <body>
-
-<header>
-    <h1>Bienvenido a Mi Portafolio</h1>
-</header>
-
-<main>
-    <section class="about-section">
-        <h2>Sobre Mí</h2>
-        <p>Descripción sobre mí.</p>
+  <div id="city-bg"></div>
+  <canvas id="bubbles"></canvas>
+  <header class="main-header">
+    <h1 class="animated-title">Professional Web Designer Curriculum</h1>
+    <p class="subtitle">Modern, Responsive & Creative Web Experiences</p>
+  </header>
+  <main>
+    <section class="cert-section">
+      <h2 class="section-title">Certificate Skills Overview</h2>
+      <div class="cert-list">
+        <!-- Cert 1 -->
+        <div class="cert-card">
+          <h3>Responsive Web Design (HTML + CSS)</h3>
+          <ul>
+            <li>Accessible web pages</li>
+            <li>Semantic HTML layout</li>
+            <li>Responsive design (media queries, flexbox, grid)</li>
+          </ul>
+          <div class="cert-links">
+            <a href="https://onpux.github.io/responsive_web_design/" target="_blank">Project Page</a>
+            <a href="https://www.freecodecamp.org/certification/onpux/responsive-web-design" target="_blank">Diploma</a>
+          </div>
+        </div>
+        <!-- Cert 2 -->
+        <div class="cert-card">
+          <h3>JavaScript Algorithms & Data Structures</h3>
+          <ul>
+            <li>Data structures: lists, stacks, queues, trees</li>
+            <li>Algorithms: sorting, search, recursion</li>
+            <li>Logical problem solving</li>
+          </ul>
+          <div class="cert-links">
+            <a href="https://onpux.github.io/JavaScript-Algorithms-and-Data-Structures/" target="_blank">Project Page</a>
+            <a href="https://www.freecodecamp.org/certification/onpux/javascript-algorithms-and-data-structures-v8" target="_blank">Diploma</a>
+          </div>
+        </div>
+        <!-- Cert 3 -->
+        <div class="cert-card">
+          <h3>Front End Development Libraries</h3>
+          <ul>
+            <li>SPA with React</li>
+            <li>State management with Redux</li>
+            <li>Interactivity with jQuery & Bootstrap</li>
+          </ul>
+          <div class="cert-links">
+            <a href="https://onpux.github.io/Front_End_Development_Libraries_React_Redux_Bootstrap_jQuery/" target="_blank">Project Page</a>
+            <a href="https://www.freecodecamp.org/certification/onpux/front-end-development-libraries" target="_blank">Diploma</a>
+          </div>
+        </div>
+        <!-- Cert 4 -->
+        <div class="cert-card">
+          <h3>Data Visualization (D3.js + JSON)</h3>
+          <ul>
+            <li>Interactive charts (bar, scatter, maps, trees)</li>
+            <li>Work with JSON data & APIs</li>
+            <li>SVG animations & transitions</li>
+          </ul>
+          <div class="cert-links">
+            <a href="https://onpux.github.io/Data-Visualization-D3.js-JSON-/" target="_blank">Project Page</a>
+            <a href="https://www.freecodecamp.org/certification/onpux/data-visualization" target="_blank">Diploma</a>
+          </div>
+        </div>
+        <!-- Cert 5 -->
+        <div class="cert-card">
+          <h3>Scientific Computing with Python</h3>
+          <ul>
+            <li>Python syntax & logic</li>
+            <li>Math operations, standard modules</li>
+            <li>Functions, classes, scripts</li>
+          </ul>
+          <div class="cert-links">
+            <a href="https://onpux.github.io/Scientific-Computing-with-Python/" target="_blank">Project Page</a>
+            <a href="https://www.freecodecamp.org/certification/onpux/scientific-computing-with-python-v7" target="_blank">Diploma</a>
+          </div>
+        </div>
+        <!-- Cert 6 -->
+        <div class="cert-card">
+          <h3>Data Analysis with Python</h3>
+          <ul>
+            <li>Data cleaning with Pandas</li>
+            <li>DataFrame manipulation</li>
+            <li>Charts with Matplotlib & Seaborn</li>
+          </ul>
+          <div class="cert-links">
+            <a href="https://onpux.github.io/Data_Analysis_with_Python/" target="_blank">Project Page</a>
+            <a href="https://www.freecodecamp.org/certification/onpux/data-analysis-with-python-v7" target="_blank">Diploma</a>
+          </div>
+        </div>
+        <!-- Cert 7 -->
+        <div class="cert-card">
+          <h3>Machine Learning with Python</h3>
+          <ul>
+            <li>Supervised & unsupervised modeling</li>
+            <li>Regression, classification, clustering</li>
+            <li>Scikit-learn, basic TensorFlow, NLP</li>
+          </ul>
+          <div class="cert-links">
+            <a href="https://onpux.github.io/Machine-Learning-with-Python/" target="_blank">Project Page</a>
+            <a href="https://www.freecodecamp.org/certification/onpux/machine-learning-with-python-v7" target="_blank">Diploma</a>
+          </div>
+        </div>
+        <!-- Cert 8 -->
+        <div class="cert-card">
+          <h3>College Algebra with Python</h3>
+          <ul>
+            <li>Algebraic & graphical representations</li>
+            <li>Equation solving</li>
+            <li>Function visualization</li>
+          </ul>
+          <div class="cert-links">
+            <a href="https://onpux.github.io/College-Algebra-with-Python/" target="_blank">Project Page</a>
+            <a href="https://www.freecodecamp.org/certification/onpux/college-algebra-with-python-v8" target="_blank">Diploma</a>
+          </div>
+        </div>
+      </div>
     </section>
-
-    <section class="certificate">
-        <h2>Certificados</h2>
-        <p>Mis certificados.</p>
-    </section>
-
-    <section class="project">
-        <h2>Proyectos</h2>
-        <p>Mis proyectos.</p>
-    </section>
-</main>
-
-<button id="backToTop">Volver Arriba</button>
-
-<script>
-    // Efecto de aparición animada para secciones al hacer scroll
-    function revealOnScroll() {
-      const reveals = document.querySelectorAll('.about-section, .certificate, .project');
-      let delay = 0;
-      for (const el of reveals) {
-        const windowHeight = window.innerHeight;
-        const elementTop = el.getBoundingClientRect().top;
-        const elementVisible = 80;
-        if (elementTop < windowHeight - elementVisible) {
-          el.classList.add('active-reveal');
-          el.style.transitionDelay = delay + 'ms';
-          delay += 120;
-        } else {
-          el.classList.remove('active-reveal');
-          el.style.transitionDelay = '0ms';
-        }
-      }
-    }
-    window.addEventListener('scroll', revealOnScroll);
-    window.addEventListener('DOMContentLoaded', revealOnScroll);
-
-    // Efecto de letras animadas en el header
-    document.addEventListener('DOMContentLoaded', () => {
-      const h1 = document.querySelector('header h1');
-      if (h1) {
-        const text = h1.textContent;
-        h1.innerHTML = '';
-        for (let i = 0; i < text.length; i++) {
-          const span = document.createElement('span');
-          span.textContent = text[i];
-          span.style.display = 'inline-block';
-          span.style.transition = 'transform 0.3s, color 0.3s, text-shadow 0.3s';
-          span.style.cursor = 'pointer';
-          span.addEventListener('mouseover', () => {
-            span.style.transform = 'scale(1.3) rotate(-8deg)';
-            span.style.color = '#fbc2eb';
-            span.style.textShadow = '0 0 16px #a18cd1, 0 0 8px #fff';
-          });
-          span.addEventListener('mouseout', () => {
-            span.style.transform = 'scale(1)';
-            span.style.color = '';
-            span.style.textShadow = '';
-          });
-          h1.appendChild(span);
-        }
-      }
-    });
-
-    // Efecto de máquina de escribir en el subtítulo del header
-    document.addEventListener('DOMContentLoaded', () => {
-      const subtitle = document.createElement('p');
-      subtitle.id = 'typewriter';
-      subtitle.style.fontSize = '1.2rem';
-      subtitle.style.marginTop = '10px';
-      subtitle.style.color = '#a18cd1';
-      const text = 'Web Developer | Python | React | Data Analysis';
-      document.querySelector('header').appendChild(subtitle);
-      let i = 0;
-      function type() {
-        if (i <= text.length) {
-          subtitle.textContent = text.slice(0, i);
-          i++;
-          setTimeout(type, 60);
-        }
-      }
-      type();
-    });
-
-    // Efecto de resplandor en links de certificados
-    document.addEventListener('DOMContentLoaded', () => {
-      const certLinks = document.querySelectorAll('.certificate a');
-      certLinks.forEach(link => {
-        link.addEventListener('mouseover', () => {
-          link.style.boxShadow = '0 0 16px 4px #a18cd1, 0 0 8px #fbc2eb';
-          link.style.background = 'linear-gradient(90deg, #a18cd1 0%, #fbc2eb 100%)';
-          link.style.color = '#fff';
-        });
-        link.addEventListener('mouseout', () => {
-          link.style.boxShadow = '';
-          link.style.background = '';
-          link.style.color = '';
-        });
-      });
-    });
-
-    // Animación de conteo para proyectos/certificados (si hay números)
-    document.addEventListener('DOMContentLoaded', () => {
-      const counters = document.querySelectorAll('.counter');
-      counters.forEach(counter => {
-        let start = 0;
-        const end = parseInt(counter.textContent);
-        function update() {
-          if (start < end) {
-            start += Math.ceil((end - start) / 10);
-            counter.textContent = start;
-            setTimeout(update, 40);
-          } else {
-            counter.textContent = end;
-          }
-        }
-        update();
-      });
-    });
-
-    // Fondo animado de burbujas moradas
-    document.addEventListener('DOMContentLoaded', () => {
-      const canvas = document.createElement('canvas');
-      canvas.style.position = 'fixed';
-      canvas.style.top = '0';
-      canvas.style.left = '0';
-      canvas.style.width = '100vw';
-      canvas.style.height = '100vh';
-      canvas.style.zIndex = '-1';
-      canvas.style.pointerEvents = 'none';
-      document.body.appendChild(canvas);
-      const ctx = canvas.getContext('2d');
-      let W, H;
-      function resize() {
-        W = window.innerWidth;
-        H = window.innerHeight;
-        canvas.width = W;
-        canvas.height = H;
-      }
-      window.addEventListener('resize', resize);
-      resize();
-      // Burbujas
-      const bubbles = Array.from({length: 18}, () => ({
-        x: Math.random() * W,
-        y: Math.random() * H,
-        r: 18 + Math.random() * 22,
-        d: 0.5 + Math.random() * 1.2,
-        alpha: 0.12 + Math.random() * 0.18
-      }));
-      function animate() {
-        ctx.clearRect(0, 0, W, H);
-        for (const b of bubbles) {
-          ctx.beginPath();
-          ctx.arc(b.x, b.y, b.r, 0, 2 * Math.PI);
-          ctx.fillStyle = `rgba(161,140,209,${b.alpha})`;
-          ctx.fill();
-          b.y -= b.d;
-          if (b.y + b.r < 0) {
-            b.x = Math.random() * W;
-            b.y = H + b.r;
-          }
-        }
-        requestAnimationFrame(animate);
-      }
-      animate();
-    });
-
-    // Botón volver arriba
-    function scrollToTop() {
-      window.scrollTo({ top: 0, behavior: 'smooth' });
-    }
-    window.scrollToTop = scrollToTop;
-    window.addEventListener('scroll', () => {
-      const button = document.getElementById('backToTop');
-      button.style.display = window.scrollY > 200 ? 'block' : 'none';
-    });
-  </script>
+  </main>
+  <footer>
+    <p>Designed by a passionate Web Designer | &copy; 2025</p>
+  </footer>
+  <script src="designer_cv.js"></script>
 </body>
 </html>
