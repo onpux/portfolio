@@ -58,7 +58,7 @@ body {
   z-index: 10;
   max-width: 1100px;
   margin: 40px auto 0 auto;
-  background: rgba(30, 20, 60, 0.92);
+  background: rgba(30, 20, 60, 0.32); /* Más transparente */
   border-radius: 24px;
   box-shadow: 0 4px 32px #ffd70022;
   padding: 40px 24px 32px 24px;
@@ -78,7 +78,7 @@ body {
   justify-content: center;
 }
 .cert-card {
-  background: linear-gradient(120deg, #2d1457 60%, #3a206b 100%);
+  background: rgba(45, 20, 87, 0.22); /* Más transparente */
   border-radius: 16px;
   box-shadow: 0 2px 16px #ffd70033;
   padding: 28px 22px 18px 22px;
